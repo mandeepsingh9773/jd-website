@@ -1,17 +1,22 @@
 import React from "react";
+import insta from "../images/insta.png";
+import twitter from "../images/twitter.png";
+import youtube from "../images/youtube.png";
+import line from "../images/Line 2.png";
+import unsplash from "../images/unsplash_2.png"
 
 const Contact = () => {
   return (
     <div
-      className="object-cover flex text-white justify-between"
-      style={{
-        backgroundImage:
-          'url("https://s3-alpha-sig.figma.com/img/f8fa/1a15/96d618c605574ff502cff765ecf7884a?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DCy9f~wZxD6syerDzgltZX7lSlOarIsU7N83xjHPLvqHk0AyHTclds8Gyfo0g5LJEf8XqPP6~OZx6y1RIFdfbcC1g~UtS-iqTbih9oUWRlAyh5UOun-avil~zv-yoQAyRcbuDAbsP90ubhKjToZnWsclgATTSwvNheq9EnpO9VHSdqi4at~B4tUd2kkGHgFgKt79EjL-Q8jQa-nkp8higJ9Pxi5k4QC7J6Cib4dhMpYFxpgIiGB~VvWq362Sk-mjEgWRrUNZjp6---6ciApjkzPXmtgXSUirYaghzf21ahPNY~2Hmd8W2tSxKsILLP~D0QIpNpZaTWTHH66M56l-tg__")',
-      }}
+      className="flex bg-black text-white justify-between py-12"
     >
-      <div className="logos">logos</div>
-      <div className="email text-left flex flex-col p-5 gap-4">
-        <div class="w-[20rem] border border-t bg-gradient-to-r from-transparent via-transparent to-black"></div>
+      <div className="logos w-1/4 flex flex-col gap-8 justify-center items-end pr-14 pb-[13rem]">
+        <img className="w-[35px]" src={youtube} alt="instagram" />
+        <img className="w-[35px]" src={insta} alt="instagram" />
+        <img className="w-[35px]" src={twitter} alt="instagram" />
+      </div>
+      <div className="email w-1/4 text-left flex flex-col px-4 py-10 gap-4">
+        <img src={line} alt="line" />
         <p className="text-[45px] font-custom1">
           Let’s <span className="text-[#FF9000]">Create...</span>
         </p>
@@ -21,7 +26,7 @@ const Contact = () => {
         </p>
         <p className="text-[22px]">jayswarankar07@gmail.com</p>
       </div>
-      <div className="form w-1/2 flex relative p-4 font-custom1">
+      <div className="form w-1/2 flex relative px-16 py-10 font-custom1">
         <form className="flex flex-col text-white">
           <input
             className="h-[45px] w-[410px] p-4 bg-black bg-opacity-0 border-t-[1px] border-l-[1px] border-white border-opacity-100"
@@ -32,7 +37,7 @@ const Contact = () => {
           />
           <br />
           <input
-            className="h-[45px]  w-[410px] p-4 bg-black bg-opacity-0 border-t-[1px] border-l-[1px] border-white border-opacity-100"
+            className="h-[45px] w-[410px] p-4 bg-black bg-opacity-0 border-t-[1px] border-l-[1px] border-white border-opacity-100"
             type="text"
             id="contact"
             name="contact"
@@ -53,7 +58,7 @@ const Contact = () => {
             name="message"
             placeholder="Message"
           ></textarea>
-          <button className="p-1 h-[35px] w-[410px] bg-[#303030] text-[#A4A4A4]">
+          <button className="p-1 h-[35px] w-[410px] bg-[#303030] text-[#A4A4A4] hover:bg-gray-800">
             SUBMIT
           </button>
         </form>
