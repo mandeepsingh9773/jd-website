@@ -1,7 +1,9 @@
 import './App.css';
 import CategorySection from './components/CategorySection';
+import Contact from './components/Contact';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import ProfileSection from './components/ProfileSection';
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
         <Header />
         <Hero />
         <CategorySection />
+        <ProfileSection />
+        <Contact />
     </div>
   );
 }

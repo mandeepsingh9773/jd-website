@@ -10,7 +10,7 @@ const Header = () => {
         </p>
       </div>
       <div className="p-6">
-        <p className="text-2xl pl-4 pb-6 text-white tracking-wide">Let's Create...</p>
+        <button className="text-2xl pl-4 pb-6 text-white tracking-wide hover:text-[#FF9000]">Let's Create...</button>
       </div>
     </div>
   );
