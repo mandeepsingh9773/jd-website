@@ -3,7 +3,7 @@ import React from "react";
 const CategorySection = () => {
   return (
     <div className="main bg-black md:p-6">
-      <div className="category md:flex md:flex-row justify-start md:gap-6 md:px-24">
+      <div className="category flex flex-row md:justify-start gap-6 pt-12 md:px-24">
         <button className="bg-black text-white md:text-[24px] hover:text-[#FF9000]">
           View All
         </button>
@@ -20,7 +20,7 @@ const CategorySection = () => {
       <div className="cards grid grid-cols-1 md:grid-cols-4 md:gap-9 md:px-24 md:py-12">
         <div className="image_card1 md:w-[290px]">
           <img
-            className="md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
+            className="w-full h-[40%] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
             src="https://s3-alpha-sig.figma.com/img/e477/d316/97723222987a65aa596537ca4810b1a2?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=P8yCpuVRX4~B-Iu4pye2bndX6s1XNbODChMhia9OenVgAv3I4T0txQ9GC3G-3bbxKdvB0u-SABwkbzr7CMuwvKblJLqWPUFZL3i2MvXiazGwffNkuGoFMVBwCZ-6YmstN~5ZOC1sfEl0D2nK9mGmcu-sptdzRzj7TlSs2oDaeB1iOmFpCoqgegUNJE2zLhzu-FhyuI~HpxqN8rwkWkLQbyxYopFcK87VDUj7~DGjiYSNDRATng6ze4yO1Cit7B8~o4SEWmLdhE1I8fYak7itxx6Tx7cuAtmlPlydtAPl~kwU82axII9jQe74n5sDSa9Itmw4lTPg80YxZRs3hUI9AQ__"
             alt="category"
           />
