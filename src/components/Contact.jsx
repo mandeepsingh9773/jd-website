@@ -5,14 +5,23 @@ import youtube from "../images/youtube.png";
 import line from "../images/Line 2.png";
 
 const Contact = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
   return (
-    <div
-      className="bg-black text-white space-y-4 flex flex-col md:flex md:flex-row md:justify-between md:py-12"
-    >
+    <div className="bg-black text-white space-y-4 flex flex-col md:flex md:flex-row md:justify-between md:py-12">
       <div className="logos flex flex-row justify-center items-center space-x-12 md:flex md:flex-col md:gap-8 md:justify-center md:items-end md:pr-14 md:pb-[13rem] md:w-1/4">
-        <img className="pt-6 md:p-0 md:w-[35px]" src={youtube} alt="instagram" />
+        <img
+          className="pt-6 md:p-0 md:w-[35px]"
+          src={youtube}
+          alt="instagram"
+        />
         <img className="pt-6 md:p-0 md:w-[35px]" src={insta} alt="instagram" />
-        <img className="pt-6 md:p-0 md:w-[35px]" src={twitter} alt="instagram" />
+        <img
+          className="pt-6 md:p-0 md:w-[35px]"
+          src={twitter}
+          alt="instagram"
+        />
       </div>
       <div className="email px-6 py-5 space-y-6 md:w-1/4 text-left flex flex-col md:px-4 md:py-10 md:gap-4">
         <img src={line} alt="line" />
@@ -26,7 +35,10 @@ const Contact = () => {
         <p className="md:text-[22px]">jayswarankar07@gmail.com</p>
       </div>
       <div className="form md:w-1/2 md:flex md:relative md:px-16 md:py-10 font-custom1">
-        <form className="flex flex-col px-6 md:p-0 text-white">
+        <form
+          className="flex flex-col px-6 md:p-0 text-white"
+          onSubmit={handleSubmit}
+        >
           <input
             className="p-2 md:h-[45px] md:w-[410px] md:p-4 bg-black bg-opacity-0 border-t-[1px] border-l-[1px] border-white border-opacity-100"
             type="text"
