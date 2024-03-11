@@ -1,7 +1,9 @@
 import React from "react";
-import insta from "../images/insta.png";
-import twitter from "../images/twitter.png";
-import youtube from "../images/youtube.png";
+import { motion } from "framer-motion";
+import { FaYoutube } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
 import line from "../images/Line 2.png";
 
 const Contact = () => {
@@ -12,22 +14,39 @@ const Contact = () => {
     <>
       <div className="main bg-black text-white space-y- flex flex-col md:flex md:flex-row md:py-8 lg:flex lg:flex-row lg:justify-between lg:py-12 xl:flex xl:flex-row xl:justify-between xl:py-14">
         <div className="logo-email md:flex md:flex-row md:justify-center md:w-1/2 xl:w-1/2">
-          <div className="logos flex flex-row justify-center items-center space-x-12 md:flex md:flex-col md:gap-8 md:justify-center md:items-end md:pr-12 md:pb-[18rem] md:w-1/4  lg:flex lg:flex-col lg:gap-8 lg:justify-center lg:items-end lg:mt-4 lg:pr-14 lg:pb-[18rem] lg:w-1/2 xl:flex xl:flex-col xl:gap-8 xl:justify-center xl:items-end xl:pr-14 xl:pb-[18rem] xl:w-1/2">
-            <img
-              className="pt-6 md:p-0 md:w-[30px] lg:w-[33px] xl:w-[35px]"
-              src={youtube}
-              alt="youtube"
-            />
-            <img
-              className="pt-6 md:p-0 md:w-[30px] lg:w-[33px] xl:w-[35px]"
-              src={insta}
-              alt="instagram"
-            />
-            <img
-              className="pt-6 md:p-0 md:w-[30px] lg:w-[33px] xl:w-[35px]"
-              src={twitter}
-              alt="twitter"
-            />
+          <div className="logos flex flex-row justify-center items-center space-x-12 pt-6 pb-1 md:flex md:flex-col md:gap-8 md:justify-center md:items-end md:pr-14 md:pb-[18rem] md:w-1/4  lg:flex lg:flex-col lg:gap-8 lg:justify-center lg:items-end lg:mt-4 lg:pr-14 lg:pb-[18rem] lg:pt-4 lg:w-1/2 xl:flex xl:flex-col xl:gap-8 xl:justify-center xl:items-end xl:pr-14 xl:pt-4 xl:pb-[18rem] xl:w-1/2">
+            <motion.div
+              className=" hover:cursor-pointer"
+              initial="hidden"
+              animate="visible"
+              whileHover={{ scale: 1.5 }}
+            >
+              <FaYoutube size={37} />
+            </motion.div>
+            <motion.div
+              className=" hover:cursor-pointer"
+              initial="hidden"
+              animate="visible"
+              whileHover={{ scale: 1.5 }}
+            >
+              <FaInstagram size={37.5} />
+            </motion.div>
+            <motion.dev
+              className=" hover:cursor-pointer"
+              initial="hidden"
+              animate="visible"
+              whileHover={{ scale: 1.5 }}
+            >
+              <FaXTwitter size={34.5} />
+            </motion.dev>
+            <motion.div
+              className=" hover:cursor-pointer"
+              initial="hidden"
+              animate="visible"
+              whileHover={{ scale: 1.5 }}
+            >
+              <FaLinkedin size={37.5} />
+            </motion.div>
           </div>
           <div className="email flex flex-col px-6 py-5 space-y-4 text-left md:w-1/2 md:p-0 lg:w-1/2 lg:px-4 lg:py-10 lg:gap-4">
             <img
