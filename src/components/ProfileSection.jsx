@@ -1,4 +1,5 @@
 import React from "react";
+import ProfilePic from "../images/profilePic.png";
 
 const ProfileSection = () => {
   return (
@@ -32,7 +33,7 @@ const ProfileSection = () => {
         <div className="">
           <img
             className="object-cover h-100px w-100px md:h-[20rem] md:w-[65rem] lg:h-[25rem] lg:w-[75rem] xl:h-[28rem] xl:w-[28rem]"
-            src="https://s3-alpha-sig.figma.com/img/4b82/8676/a8e4ab8cb8c5e6f398eafd8bfcb1cbc8?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZneMpNuyakY-MZFQoXORcbp~0ntLn6X1Os5gWAY2amdeWZCz3fk3kEJNBazel8hYoWSrNZUGzdg279OYYue1CQJKdJqJlDuncUQoME93cS69~NmkcECiGiCvkztZ2getNnT7th3bxvfIyW0aj7Ou5CskT44UX0y2trGO3AuCG1Ql9GJCqPNe-9WUesxfuDt1yeneM8ZUzKynlQkFnUJaK26JRWiGawD3Gn5Es-yn1uAYx31yTvi5Ox0o29XZ9H6w5OtXqkXmoD1NfJC3HaRRPkTxUYPEMDXGZUDCe1FjWX4HcfGHA1Ud~5wncziqJE-M5cXw6QoikRFBSJ4iAGcz8w__"
+            src={ProfilePic}
             alt="ProfilePicture"
           />
         </div>

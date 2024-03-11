@@ -1,0 +1,7 @@
+.grayscale-img {
+    filter: grayscale(100%);
+  }
+  
+  .grayscale-img-hover:hover {
+    filter: grayscale(0);
+  }
