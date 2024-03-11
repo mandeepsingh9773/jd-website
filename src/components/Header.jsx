@@ -11,7 +11,7 @@ const Header = () => {
         </p>
       </div>
       <div className="hidden md:inline-block md:p-6">
-        <button className="md:text-2xl md:pl-4 md:pb-6 text-white tracking-wide hover:text-[#FF9000]">
+        <button className="md:text-[30px] md:pl-4 md:pb-6 text-white tracking-wide hover:text-[#FF9000]">
           Let's Create...
         </button>
       </div>
