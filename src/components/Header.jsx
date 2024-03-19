@@ -31,6 +31,7 @@ const Header = () => {
           animate="visible"
           whileHover={{ scale: 1.2 }}
           variants={textVariants}
+          
         >
           Let's Create...
         </motion.button>

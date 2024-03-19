@@ -1,5 +1,6 @@
 import React from "react";
 import ProfilePic from "../images/profilePic.png";
+import { motion } from "framer-motion";
 
 const ProfileSection = () => {
   return (
@@ -9,9 +10,11 @@ const ProfileSection = () => {
           <p className="text-white font-custom4 text-[25px] text-start font-semibold mb-4 md:text-[25px] lg:text-[35px] xl:text-[40px] xl:font-medium xl:pb-4">
             <span className="text-[#FF9000]">JAYDEEP</span> SWARNKAR
           </p>
-          <p className="text-white text-[18px] px-1 font-extralight border border-solid border-white inline-block lg:text-[25px] xl:text-[30px] xl:px-2">
+          <motion.p
+            className="text-white text-[18px] px-1 font-extralight border border-solid border-white inline-block lg:text-[25px] xl:text-[30px] xl:px-2"
+          >
             MARKETING DESIGNER
-          </p>
+          </motion.p>
         </div>
         <div className="desc_sec text-start md:flex md:text-left lg:text-left lg:flex xl:text-left xl:flex">
           <div class="hidden md:inline-block md:h-[13rem] md:mr-4 lg:inline-block lg:h-[17rem] lg:mr-4 xl:inline-block border-l border-white xl:h-[18rem] xl:mr-4"></div>
@@ -29,7 +32,7 @@ const ProfileSection = () => {
           </div>
         </div>
       </div>
-      <div className="picture p-4 xl:w-1/2 bg-black xl:flex xl:justify-center">
+      <motion.div className="picture p-4 xl:w-1/2 bg-black xl:flex xl:justify-center">
         <div className="">
           <img
             className="object-cover h-100px w-100px md:h-[20rem] md:w-[65rem] lg:h-[25rem] lg:w-[75rem] xl:h-[28rem] xl:w-[28rem]"
@@ -37,7 +40,7 @@ const ProfileSection = () => {
             alt="ProfilePicture"
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

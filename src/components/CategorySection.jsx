@@ -15,6 +15,7 @@ const CategorySection = () => {
           initial="hidden"
           animate="visible"
           whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
         >
           View All
         </motion.button>
@@ -23,6 +24,7 @@ const CategorySection = () => {
           initial="hidden"
           animate="visible"
           whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
         >
           Branding
         </motion.button>
@@ -31,6 +33,7 @@ const CategorySection = () => {
           initial="hidden"
           animate="visible"
           whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
         >
           Digital Media
         </motion.button>
@@ -39,6 +42,7 @@ const CategorySection = () => {
           initial="hidden"
           animate="visible"
           whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
         >
           Graphics{" "}
         </motion.button>
@@ -49,6 +53,7 @@ const CategorySection = () => {
           initial="hidden"
           animate="visible"
           whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
         >
           <img
             className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0 overflow-hidden"
@@ -67,6 +72,7 @@ const CategorySection = () => {
           initial="hidden"
           animate="visible"
           whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
         >
           <img
             className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
@@ -85,6 +91,7 @@ const CategorySection = () => {
           initial="hidden"
           animate="visible"
           whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
         >
           <img
             className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
@@ -103,6 +110,7 @@ const CategorySection = () => {
           initial="hidden"
           animate="visible"
           whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
         >
           <img
             className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
@@ -121,6 +129,7 @@ const CategorySection = () => {
           initial="hidden"
           animate="visible"
           whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
         >
           <img
             className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
@@ -139,6 +148,7 @@ const CategorySection = () => {
           initial="hidden"
           animate="visible"
           whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
         >
           <img
             className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0 "
@@ -157,6 +167,7 @@ const CategorySection = () => {
           initial="hidden"
           animate="visible"
           whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
         >
           <img
             className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
@@ -175,6 +186,7 @@ const CategorySection = () => {
           initial="hidden"
           animate="visible"
           whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
         >
           <img
             className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
