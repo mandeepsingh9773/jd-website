@@ -1,5 +1,5 @@
 import React from "react";
-import ProfilePic from "../images/profilePic.png";
+import ProfilePic from "../../images/profilePic.png";
 import { motion } from "framer-motion";
 
 const ProfileSection = () => {

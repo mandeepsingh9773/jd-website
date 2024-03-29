@@ -1,10 +1,10 @@
 import React from "react";
-import Line from "../images/Line 6.png";
+import Line from "../../images/Line 6.png";
 import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <div className="font-custom1 text-white bg-black flex flex-col pl-8 gap-10 md:flex md:flex-row md:space-x-4 lg:flex lg:flex-row lg:space-x-4 px-10 xl:flex-row xl:justify-center xl:space-x-4">
+    <div className="font-custom1 text-white bg-black flex flex-col pl-8 gap-10 md:flex md:flex-row md:space-x-4 lg:flex lg:flex-row lg:space-x-4 px-10 xl:flex-row xl:justify-center xl:space-x-4 xl:py-12">
       <div className="text-left mt-10 md:mt-3">
         <img className="w-[15rem] md:w-[16rem]" src={Line} alt="line" />
         <p className="pt-8 text-[20px] md:text-[20px] md:pt-[1.2rem]">

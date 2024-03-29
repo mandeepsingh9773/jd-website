@@ -2,6 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Hero = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -27,8 +33,9 @@ const Hero = () => {
         className="md:hidden inline-block text-xl border border-white px-[1.5rem] py-[0.4rem] mb-14 rounded-full md:text-2xl md:pl-4 md:pb-6 text-white tracking-wide hover:text-[#FF9000]"
         initial="hidden"
         animate="visible"
-        variants={textVariants }
+        variants={textVariants}
         whileTap={{ scale: 0.8 }}
+        onClick={scrollToContact}
       >
         Let's Create...
       </motion.button>

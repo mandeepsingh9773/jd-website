@@ -1,23 +1,16 @@
 import './App.css';
-import CategorySection from './components/CategorySection';
-import Contact from './components/Contact';
-import Copyright from './components/Copyright';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import ProfileSection from './components/ProfileSection';
+import Branding from './components/BrandingPage/BrandingPage';
+import HomePage from './components/HomePage/HomePage';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-        <Header />
-        <Hero />
-        <CategorySection />
-        <ProfileSection />
-        <Contact />
-        <Footer />
-        <Copyright />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/branding" element={<Branding />} />
+      </Routes>
+    </Router>
   );
 }
 
