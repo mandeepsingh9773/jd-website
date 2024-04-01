@@ -1,6 +1,6 @@
 import React from "react";
-import HeaderBranding from "./HeaderCategory";
-import BrandingCom from "./BrandingCom";
+import HeaderCategory from "./HeaderCategory";
+import UIUXCom from "./UIUXCom";
 import Contact from "../HomePage/Contact";
 import Footer from "../HomePage/Footer";
 import Copyright from "../HomePage/Copyright";
@@ -8,8 +8,8 @@ import Copyright from "../HomePage/Copyright";
 const Branding = () => {
   return (
     <>
-      <HeaderBranding />
-      <BrandingCom />
+      <HeaderCategory />
+      <UIUXCom />
       <Contact />
       <Footer />
       <Copyright />

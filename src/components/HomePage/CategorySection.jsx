@@ -72,146 +72,196 @@ const CategorySection = () => {
               alt="category"
             />
             <p className=" text-white pt-2 text-center md:text-[25px] md:text-left md:pt-2 ">
-              Education Institute
+              Logo
             </p>
             <p className=" text-[#8B8B8B] text-center md:text-[20px] md:text-left">
               Branding, Logo
             </p>
           </motion.div>
         </Link>
-        <motion.div
-          className="image_card2 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
-          initial="hidden"
-          animate="visible"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
+        <Link
+          to="/uiux"
+          onClick={() => {
+            window.scroll({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
         >
-          <img
-            className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
-            src={Category_2}
-            alt="category"
-          />
-          <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
-            Backdrops
-          </p>
-          <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left">
-            Branding, Banners
-          </p>
-        </motion.div>
-        <motion.div
-          className="image_card3 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
-          initial="hidden"
-          animate="visible"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
+          <motion.div
+            className="image_card2 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
+            initial="hidden"
+            animate="visible"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8 }}
+          >
+            <img
+              className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
+              src={Category_2}
+              alt="category"
+            />
+            <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
+              UI/UX Design
+            </p>
+            <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left">
+              UI/UX, Web Design
+            </p>
+          </motion.div>
+        </Link>
+        <Link
+          to="/promobanners"
+          onClick={() => {
+            window.scroll({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
         >
-          <img
-            className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
-            src={Category_4}
-            alt="category"
-          />
-          <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
-            Product Booklet
-          </p>
-          <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left">
-            Product Showcase
-          </p>
-        </motion.div>
-        <motion.div
-          className="image_card4 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
-          initial="hidden"
-          animate="visible"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
+          <motion.div
+            className="image_card3 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
+            initial="hidden"
+            animate="visible"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8 }}
+          >
+            <img
+              className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
+              src={Category_4}
+              alt="category"
+            />
+            <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
+              Promo Banners
+            </p>
+            <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left">
+              Branding, Banners
+            </p>
+          </motion.div>
+        </Link>
+        <Link
+          to="/businessbranding"
+          onClick={() => {
+            window.scroll({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
         >
-          <img
-            className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
-            src={Category_3}
-            alt="category"
-          />
-          <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
-            Corporate
-          </p>
-          <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left ">
-            Cinematography
-          </p>
-        </motion.div>
-        <motion.div
-          className="image_card5 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
-          initial="hidden"
-          animate="visible"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
+          <motion.div
+            className="image_card4 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
+            initial="hidden"
+            animate="visible"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8 }}
+          >
+            <img
+              className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
+              src={Category_3}
+              alt="category"
+            />
+            <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
+              Business Branding
+            </p>
+            <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left ">
+              Card, Letterhead
+            </p>
+          </motion.div>
+        </Link>
+        <Link
+          to="/artdecor"
+          onClick={() => {
+            window.scroll({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
         >
-          <img
-            className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
-            src={Category_1}
-            alt="category"
-          />
-          <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
-            Custom Frames
-          </p>
-          <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left">
-            Home Decor, Frames
-          </p>
-        </motion.div>
-        <motion.div
-          className="image_card6 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
-          initial="hidden"
-          animate="visible"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
-        >
-          <img
-            className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0 "
-            src={Category_2}
-            alt="category"
-          />
-          <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
-            Backdrops
-          </p>
-          <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left">
-            Branding, Banners
-          </p>
-        </motion.div>
-        <motion.div
-          className="image_card7 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
-          initial="hidden"
-          animate="visible"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
-        >
-          <img
-            className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
-            src={Category_4}
-            alt="category"
-          />
-          <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
-            Product Booklet
-          </p>
-          <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left">
-            Product Showcase
-          </p>
-        </motion.div>
-        <motion.div
-          className="image_card8 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
-          initial="hidden"
-          animate="visible"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.8 }}
-        >
-          <img
-            className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
-            src={Category_3}
-            alt="category"
-          />
-          <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
-            Corporate
-          </p>
-          <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left ">
-            Cinematography
-          </p>
-        </motion.div>
+          <motion.div
+            className="image_card5 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
+            initial="hidden"
+            animate="visible"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8 }}
+          >
+            <img
+              className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
+              src={Category_1}
+              alt="category"
+            />
+            <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
+              Art & Decor
+            </p>
+            <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left">
+              Frames, Artwork
+            </p>
+          </motion.div>
+        </Link>
+        <Link>
+          <motion.div
+            className="image_card6 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
+            initial="hidden"
+            animate="visible"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8 }}
+          >
+            <img
+              className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0 "
+              src={Category_2}
+              alt="category"
+            />
+            <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
+              Product Package
+            </p>
+            <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left">
+              Branding, Package
+            </p>
+          </motion.div>
+        </Link>
+        <Link>
+          <motion.div
+            className="image_card7 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
+            initial="hidden"
+            animate="visible"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8 }}
+          >
+            <img
+              className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
+              src={Category_4}
+              alt="category"
+            />
+            <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
+              Product Booklet
+            </p>
+            <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left">
+              Product Showcase
+            </p>
+          </motion.div>
+        </Link>
+        <Link>
+          <motion.div
+            className="image_card8 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
+            initial="hidden"
+            animate="visible"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8 }}
+          >
+            <img
+              className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
+              src={Category_3}
+              alt="category"
+            />
+            <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
+              Coroprate Promo
+            </p>
+            <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left ">
+              Cinematography, Script
+            </p>
+          </motion.div>
+        </Link>
       </div>
     </div>
   );

@@ -1,15 +1,15 @@
 import React from "react";
-import HeaderBranding from "./HeaderCategory";
-import BrandingCom from "./BrandingCom";
+import HeaderCategory from "../BrandingPage/HeaderCategory";
+import BusinessBrandingCom from "./BusinessBrandingCom";
 import Contact from "../HomePage/Contact";
 import Footer from "../HomePage/Footer";
 import Copyright from "../HomePage/Copyright";
 
-const Branding = () => {
+const BusinessBranding = () => {
   return (
     <>
-      <HeaderBranding />
-      <BrandingCom />
+      <HeaderCategory />
+      <BusinessBrandingCom />
       <Contact />
       <Footer />
       <Copyright />
@@ -17,4 +17,4 @@ const Branding = () => {
   );
 };
 
-export default Branding;
+export default BusinessBranding;
