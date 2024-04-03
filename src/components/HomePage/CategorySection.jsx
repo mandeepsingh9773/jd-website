@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const CategorySection = () => {
   return (
-    <div className="main bg-black md:p-6">
+    <div id="category" className="main bg-black md:p-6">
       <div className="category flex flex-row gap-6 pt-12 px-4 justify-center md:justify-start md:px-24">
         <motion.button
           className="bg-black text-white md:text-[24px] hover:text-[#FF9000]"
@@ -49,6 +49,7 @@ const CategorySection = () => {
         </motion.button>
       </div>
       <div className="cards flex flex-col gap-10 py-8 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-4 xl:gap-8 md:px-24 md:py-12">
+        {/* 1 */}
         <Link
           to="/branding"
           onClick={() => {
@@ -79,6 +80,7 @@ const CategorySection = () => {
             </p>
           </motion.div>
         </Link>
+        {/* 2 */}
         <Link
           to="/uiux"
           onClick={() => {
@@ -109,6 +111,7 @@ const CategorySection = () => {
             </p>
           </motion.div>
         </Link>
+        {/* 3 */}
         <Link
           to="/promobanners"
           onClick={() => {
@@ -139,6 +142,7 @@ const CategorySection = () => {
             </p>
           </motion.div>
         </Link>
+        {/* 4 */}
         <Link
           to="/businessbranding"
           onClick={() => {
@@ -169,6 +173,38 @@ const CategorySection = () => {
             </p>
           </motion.div>
         </Link>
+        {/* 5 */}
+        <Link
+          to="/cinemetography"
+          onClick={() => {
+            window.scroll({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
+          <motion.div
+            className="image_card8 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
+            initial="hidden"
+            animate="visible"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8 }}
+          >
+            <img
+              className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
+              src={Category_3}
+              alt="category"
+            />
+            <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
+              Coroprate Promo
+            </p>
+            <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left ">
+              Cinematography, Script
+            </p>
+          </motion.div>
+        </Link>
+        {/* 6 */}
         <Link
           to="/artdecor"
           onClick={() => {
@@ -199,7 +235,17 @@ const CategorySection = () => {
             </p>
           </motion.div>
         </Link>
-        <Link>
+        {/* 7 */}
+        <Link
+          to="/standee"
+          onClick={() => {
+            window.scroll({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <motion.div
             className="image_card6 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
             initial="hidden"
@@ -213,14 +259,24 @@ const CategorySection = () => {
               alt="category"
             />
             <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
-              Product Package
+              Standees
             </p>
             <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left">
-              Branding, Package
+              Branding, Showcase
             </p>
           </motion.div>
         </Link>
-        <Link>
+        {/* 8 */}
+        <Link
+          to="/"
+          onClick={() => {
+            window.scroll({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <motion.div
             className="image_card7 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
             initial="hidden"
@@ -238,27 +294,6 @@ const CategorySection = () => {
             </p>
             <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left">
               Product Showcase
-            </p>
-          </motion.div>
-        </Link>
-        <Link>
-          <motion.div
-            className="image_card8 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
-            initial="hidden"
-            animate="visible"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.8 }}
-          >
-            <img
-              className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0"
-              src={Category_3}
-              alt="category"
-            />
-            <p className="text-white text-center pt-2 md:text-[25px] md:text-left md:pt-2">
-              Coroprate Promo
-            </p>
-            <p className="text-[#8B8B8B] text-center md:text-[20px] md:text-left ">
-              Cinematography, Script
             </p>
           </motion.div>
         </Link>

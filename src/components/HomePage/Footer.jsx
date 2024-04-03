@@ -1,8 +1,30 @@
 import React from "react";
 import Line from "../../images/Line 6.png";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToCategory = () => {
+    setTimeout(() => {
+      const categoryElement = document.getElementById("category");
+      if (categoryElement) {
+        const yOffset = 0;
+        const y =
+          categoryElement.getBoundingClientRect().top +
+          window.pageYOffset +
+          yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     <div className="font-custom1 text-white bg-black flex flex-col pl-8 gap-10 md:flex md:flex-row md:space-x-4 lg:flex lg:flex-row lg:space-x-4 px-10 xl:flex-row xl:justify-center xl:space-x-4 xl:py-12">
       <div className="text-left mt-10 md:mt-3">
@@ -11,7 +33,7 @@ const Footer = () => {
           <span className="text-[#FF9000] ">Velar</span> Designing Studios
         </p>
         <p className="text-[#8B8B8B] text-[18px] pt-2 md:pt-2">
-          jayswarankar07@gmail.com
+          velarstudioswork@gmail.com
         </p>
       </div>
       <div className="text-left">
@@ -21,9 +43,32 @@ const Footer = () => {
           alt="line"
         />
         <p className="text-[21px] md:text-[20px] md:pt-2">Sitemap</p>
-        <p className="text-[#8B8B8B] text-[18px] pt-2 md:pt-2">Home</p>
-        <p className="text-[#8B8B8B] text-[18px]">Portfolio</p>
-        <p className="text-[#8B8B8B] text-[18px]">Contact Us</p>
+        <Link
+          to="/"
+          onClick={() => {
+            window.scroll({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
+          <p className="text-[#8B8B8B] text-[18px] pt-2 md:pt-2">Home</p>
+        </Link>
+        <Link to="/#category">
+          <p
+            onClick={scrollToCategory}
+            className="text-[#8B8B8B] text-[18px] hover:cursor-pointer"
+          >
+            Portfolio
+          </p>
+        </Link>
+        <p
+          onClick={scrollToContact}
+          className="text-[#8B8B8B] text-[18px] hover:cursor-pointer"
+        >
+          Contact Us
+        </p>
       </div>
       <div className="text-left">
         <img
@@ -60,4 +105,5 @@ const Footer = () => {
     </div>
   );
 };
+
 export default Footer;

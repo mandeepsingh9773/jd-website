@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const HeaderCategory = () => {
   const scrollToContact = () => {
@@ -19,14 +20,16 @@ const HeaderCategory = () => {
   return (
     <div className="header-main text-[20px] font-custom1 bg-black flex justify-center md:flex md:items-center md:justify-between md:w-auto md:px-12 md:pt-6">
       <div className="p-6 md:p-6">
-        <motion.p
-          className="text-[1.3rem] md:text-2xl md:pl-0 md:text-left text-white lg:text-3xl"
-          initial="hidden"
-          animate="visible"
-          variants={textVariants}
-        >
-          <span className="text-[#FF9000]">Velar </span> Designing Studios{" "}
-        </motion.p>
+        <Link to="/">
+          <motion.p
+            className="text-[1.3rem] md:text-2xl md:pl-0 md:text-left text-white lg:text-3xl"
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+          >
+            <span className="text-[#FF9000]">Velar </span> Designing Studios{" "}
+          </motion.p>
+        </Link>
       </div>
       <div className="hidden md:inline-block md:p-6 ">
         <motion.button

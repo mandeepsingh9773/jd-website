@@ -6,6 +6,8 @@ import UIUXPage from "./components/UiUxDesignPage/UIUXPage";
 import BusinessBrandingPage from "./components/BusinessBrandingPage/BusinessBrandingPage";
 import PromoBannersPage from "./components/PromoBannersPage/PromoBannersPage";
 import HomePage from "./components/HomePage/HomePage";
+import CinemetographyPage from "./components/CinemetographyPage/CinemetographyPage";
+import StandeesPage from "./components/StandeesPage/StandeesPage";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/businessbranding" element={<BusinessBrandingPage />} />
         <Route path="/promobanners" element={<PromoBannersPage />} />
         <Route path="/artdecor" element={<ArtDecorPage />} />
+        <Route path="/cinemetography" element={<CinemetographyPage />} />
+        <Route path="/standee" element={<StandeesPage />} />
       </Routes>
     </Router>
   );

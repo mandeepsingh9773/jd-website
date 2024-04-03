@@ -70,7 +70,7 @@ const Contact = () => {
               help you!
             </p>
             <p className="md:text-[15px] lg:text-[19px] xl:text-[22px]">
-              jayswarankar07@gmail.com
+              velarstudioswork@gmail.com
             </p>
           </div>
         </div>
