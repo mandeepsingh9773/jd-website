@@ -10,12 +10,11 @@ import { Link } from "react-router-dom";
 const CategorySection = () => {
   return (
     <div id="category" className="main bg-black md:p-6">
-      <div className="category flex flex-row gap-6 pt-12 px-4 justify-center md:justify-start md:px-24">
+      <div className="category hidden md:flex md:flex-row md:gap-8 md:pt-12 md:justify-start md:px-24">
         <motion.button
           className="bg-black text-white md:text-[24px] hover:text-[#FF9000]"
           initial="hidden"
           animate="visible"
-          whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.8 }}
         >
           View All
@@ -24,7 +23,6 @@ const CategorySection = () => {
           className="bg-black text-white md:text-[24px] hover:text-[#FF9000]"
           initial="hidden"
           animate="visible"
-          whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.8 }}
         >
           Branding
@@ -33,19 +31,25 @@ const CategorySection = () => {
           className="bg-black text-white md:text-[24px] hover:text-[#FF9000]"
           initial="hidden"
           animate="visible"
-          whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.8 }}
         >
-          Digital Media
+          UI/UX
         </motion.button>
         <motion.button
           className="bg-black text-white md:text-[24px] hover:text-[#FF9000]"
           initial="hidden"
           animate="visible"
-          whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.8 }}
         >
-          Graphics{" "}
+          Cinematography
+        </motion.button>
+        <motion.button
+          className="bg-black text-white md:text-[24px] hover:text-[#FF9000]"
+          initial="hidden"
+          animate="visible"
+          whileTap={{ scale: 0.8 }}
+        >
+          Decor
         </motion.button>
       </div>
       <div className="cards flex flex-col gap-10 py-8 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-4 xl:gap-8 md:px-24 md:py-12">
@@ -80,6 +84,7 @@ const CategorySection = () => {
             </p>
           </motion.div>
         </Link>
+
         {/* 2 */}
         <Link
           to="/uiux"
@@ -111,6 +116,7 @@ const CategorySection = () => {
             </p>
           </motion.div>
         </Link>
+
         {/* 3 */}
         <Link
           to="/promobanners"
@@ -142,6 +148,7 @@ const CategorySection = () => {
             </p>
           </motion.div>
         </Link>
+
         {/* 4 */}
         <Link
           to="/businessbranding"
@@ -173,6 +180,7 @@ const CategorySection = () => {
             </p>
           </motion.div>
         </Link>
+
         {/* 5 */}
         <Link
           to="/cinemetography"
@@ -204,6 +212,7 @@ const CategorySection = () => {
             </p>
           </motion.div>
         </Link>
+
         {/* 6 */}
         <Link
           to="/artdecor"
@@ -235,6 +244,7 @@ const CategorySection = () => {
             </p>
           </motion.div>
         </Link>
+
         {/* 7 */}
         <Link
           to="/standee"
@@ -266,6 +276,7 @@ const CategorySection = () => {
             </p>
           </motion.div>
         </Link>
+
         {/* 8 */}
         <Link
           to="/"
