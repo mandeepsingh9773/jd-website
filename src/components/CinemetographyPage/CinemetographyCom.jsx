@@ -16,10 +16,9 @@ const CinemetographyCom = () => {
           className="aspect-video h-[220px] w-full xl:h-[500px] xl:w-[1100px]"
           src="https://www.youtube.com/embed/ZIK_c5-L6wI?si=7clUCO9Zd7YSim2e&autoplay=1"
           title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-        ></iframe>
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+          referrerpolicy="strict-origin-when-cross-origin" >
+        </iframe>
       </div>
       <div className="about bg-black w-full flex flex-col justify-center items-center xl:flex xl:flex-row xl:px-28 xl:py-12">
         <div className="category md:py-8 lg:py-0 lg:pb-20 xl:pr-12 xl:pb-40">

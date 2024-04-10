@@ -7,8 +7,6 @@ import Category_3 from "../../images/category_3.png";
 import Category_4 from "../../images/category_4.png";
 import { Link } from "react-router-dom";
 
-
-
 const CategorySection = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -90,9 +88,8 @@ const CategorySection = () => {
         {categories.map((category) => (
           <motion.button
             key={category.name}
-            className={`bg-black text-white md:text-[24px] hover:text-[#FF9000] ${
-              selectedCategory === category.name ? "font-bold" : ""
-            }`}
+            className="bg-black text-white md:text-[24px] hover:text-[#FF9000]"
+            style={{ color: selectedCategory === category.name ? '#FF9000' : 'white' }}
             initial="hidden"
             animate="visible"
             whileTap={{ scale: 0.8 }}

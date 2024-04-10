@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-::selection{
-    color: rgb(200, 230, 70);
-  }
+::selection {
+  color: rgb(200, 230, 70);
+}
+
+/* 1. Set scrollbar width and colors for general browsers */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #000000;  
+}
+
+/* 2. Use hover and active states for dynamic color changes */
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active {
+  scrollbar-color: #FF9000;
+}
+
+/* 3. Additional styling (optional) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0);
+  border-radius: 3px;
+}

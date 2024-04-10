@@ -8,6 +8,7 @@ import PromoBannersPage from "./components/PromoBannersPage/PromoBannersPage";
 import HomePage from "./components/HomePage/HomePage";
 import CinemetographyPage from "./components/CinemetographyPage/CinemetographyPage";
 import StandeesPage from "./components/StandeesPage/StandeesPage";
+import ProductBookletPage from "./components/ProductBookletPage/ProductBookletPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/art&decor" element={<ArtDecorPage />} />
         <Route path="/cinematography" element={<CinemetographyPage />} />
         <Route path="/standees" element={<StandeesPage />} />
+        <Route path="/productbooklet" element={<ProductBookletPage />} />
       </Routes>
     </Router>
   );
