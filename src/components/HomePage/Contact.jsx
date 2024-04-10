@@ -28,7 +28,7 @@ const Contact = () => {
         <div className="logo-email md:flex md:flex-row md:justify-center md:w-1/2 xl:w-1/2">
           <div className="logos flex flex-row justify-center items-center space-x-12 pt-6 pb-1 md:flex md:flex-col md:gap-8 md:justify-center md:items-end md:pr-14 md:pb-[18rem] md:w-1/4  lg:flex lg:flex-col lg:gap-8 lg:justify-center lg:items-end lg:mt-4 lg:pr-14 lg:pb-[18rem] lg:pt-4 lg:w-1/2 xl:flex xl:flex-col xl:gap-8 xl:justify-center xl:items-end xl:pr-14 xl:pt-6 xl:pb-[18rem] xl:w-1/2">
             <Link
-              to="https://www.instagram.com/jaydeepswarankar/"
+              to="https://www.instagram.com/velarstudios.co/"
               target="_blank"
               rel="noopener noreferrer"
             >

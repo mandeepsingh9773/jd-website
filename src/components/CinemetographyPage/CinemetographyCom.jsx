@@ -25,34 +25,29 @@ const CinemetographyCom = () => {
         <div className="category md:py-8 lg:py-0 lg:pb-20 xl:pr-12 xl:pb-40">
           <div className="md:h-[200px] md:w-[450px] flex flex-col shadow-2xl py-10 md:py-0">
             <div className="bg-black text-[30px] md:text-[38px] text-white py-4 px-6 flex-1 rounded-t-lg">
-              CRM Institute
+              Corporate Promo
             </div>
             <div className="text-[22px] md:text-[20px] bg-[#141414] text-white py-4 px-6 flex-1 rounded-b-lg">
               Project Type <br />
               <span className="text-[#FFFFFF8C]">
-                Brand Identity , Logo Design
+                Cinematography, Direction
               </span>
             </div>
           </div>
         </div>
         <div className="desc bg-black space-y-8 px-4 md:px-16 lg:px-24 xl:pl-4">
-          <p className="text-white text-[24px] hidden lg:inline-block">
-            I believe in making brand grow{" "}
-            <span className="text-[#FF9000]">rich...</span>
+          <p className="text-[#8B8B8B] text-[20px] text-justify">
+            This project brings me the opportunity to be both director and
+            cinematographer, capturing the essence of a new space with the
+            energetic environment of employees. Every workspace and cabin has a
+            vibe that enlightens new thoughts and the spirit of collaboration.{" "}
           </p>
           <p className="text-[#8B8B8B] text-[20px] text-justify">
-            This project is delved deep to strike a balance between tradition
-            and innovation. The choice of Navy blue signifies the solid academic
-            foundation and trustworthiness of the institute, while Orange
-            injects a dose of energy and creativity into the mix.{" "}
-          </p>
-          <p className="text-[#8B8B8B] text-[20px] text-justify">
-            The logo's hero is the letter 'i', cast in vibrant orange to stand
-            as a metaphor for the institute's role in lighting the fire of ideas
-            and innovation within its students. The logo's hero is the letter
-            'i', cast in vibrant orange to stand as a metaphor for the
-            institute's role in lighting the fire of ideas and innovation within
-            its students.
+            The editing process was a careful composition of visuals and
+            narratives, piecing together a fluid tale of a modern workplace
+            coming to life. This project was not just a showcase of space but a
+            dialogue between form and function, culminating in a corporate promo
+            video that breathes the spirit of the company's future.
           </p>
         </div>
       </div>

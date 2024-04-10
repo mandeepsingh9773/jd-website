@@ -18,9 +18,9 @@ function App() {
         <Route path="/uiux" element={<UIUXPage />} />
         <Route path="/businessbranding" element={<BusinessBrandingPage />} />
         <Route path="/promobanners" element={<PromoBannersPage />} />
-        <Route path="/artdecor" element={<ArtDecorPage />} />
-        <Route path="/cinemetography" element={<CinemetographyPage />} />
-        <Route path="/standee" element={<StandeesPage />} />
+        <Route path="/art&decor" element={<ArtDecorPage />} />
+        <Route path="/cinematography" element={<CinemetographyPage />} />
+        <Route path="/standees" element={<StandeesPage />} />
       </Routes>
     </Router>
   );
