@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Line from "../../images/Line 6.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleEmailSubmit = (e) => {
+    e.preventDefault();
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!emailRegex.test(email)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+    toast.success("Subscribed successfully!");
+    setEmail("");
+  };
+
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
@@ -31,6 +50,17 @@ const Footer = () => {
 
   return (
     <div className="font-custom1 text-white bg-black flex flex-col pl-8 gap-10 md:flex md:flex-row md:space-x-4 lg:flex lg:flex-row lg:space-x-4 px-10 xl:flex-row xl:justify-center xl:space-x-4 xl:py-12">
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="text-left mt-10 md:mt-3">
         <img className="w-[15rem] md:w-[16rem]" src={Line} alt="line" />
         <p className="pt-8 text-[20px] md:text-[20px] md:pt-[1.2rem]">
@@ -119,11 +149,13 @@ const Footer = () => {
             id="email"
             name="email"
             placeholder="Email"
+            onChange={handleEmailChange}
           />
           <motion.button
             className="w-1/2 p-1 bg-[#303030] text-[#A4A4A4] hover:bg-gray-800 md:w-auto"
             whileTap={{ scale: 0.8 }}
             whileHover={{ scale: 1.1 }}
+            onClick={handleEmailSubmit}
           >
             Subscribe
           </motion.button>
