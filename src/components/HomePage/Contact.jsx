@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -7,12 +7,36 @@ import line from "../../images/Line 2.png";
 import "./ContactStyle.css";
 import { Link } from "react-router-dom";
 
-
-
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    contact: "",
+    email: "",
+    message: "",
+  });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    // Validate email
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!emailRegex.test(formData.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    // Validate phone number
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(formData.contact)) {
+      alert("Please enter a valid 10-digit phone number.");
+      return;
+    }
+
+    console.log(formData);
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleEmailClick = () => {
@@ -98,7 +122,7 @@ const Contact = () => {
         <div className="form font-custom1 w-full md:w-1/2 lg:flex lg-w-1/2 lg:px-8 lg:py-10 xl:flex xl:w-1/2 xl:px-16 xl:py-10">
           <form
             className="flex flex-col px-6 text-white"
-            onSubmit={handleSubmit}
+            onSubmit={handleFormSubmit}
           >
             <input
               className="p-2 w-full md:w-full lg:w-[410px] xl:w-[410px] h-[45px] md:p-4 bg-black bg-opacity-0 border-t-[1px] border-l-[1px] border-white border-opacity-100"
@@ -106,6 +130,7 @@ const Contact = () => {
               id="name"
               name="name"
               placeholder="Name"
+              onChange={handleChange}
             />
             <br />
             <input
@@ -114,6 +139,7 @@ const Contact = () => {
               id="contact"
               name="contact"
               placeholder="Contact"
+              onChange={handleChange}
             />
             <br />
             <input
@@ -122,6 +148,7 @@ const Contact = () => {
               id="email"
               name="email"
               placeholder="Email"
+              onChange={handleChange}
             />
             <br />
             <textarea
@@ -129,6 +156,7 @@ const Contact = () => {
               id="message"
               name="message"
               placeholder="Message"
+              onChange={handleChange}
             ></textarea>
             <motion.button
               className="my-8 p-2 w-full md:w-auto lg:w-auto xl:w-auto h-[35px] m-0 bg-[#303030] text-[#A4A4A4] hover:bg-gray-800"

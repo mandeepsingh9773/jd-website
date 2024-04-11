@@ -99,7 +99,7 @@ const CategorySection = () => {
           </motion.button>
         ))}
       </div>
-      <div className="cards flex flex-col gap-10 py-8 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-4 xl:gap-8 md:px-24 md:py-12">
+      <div className="cards font-custom2 flex flex-col gap-10 py-8 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-4 xl:gap-8 md:px-24 md:py-12">
         {filteredCards.map((card, index) => (
           <Link
             key={index}
@@ -113,7 +113,7 @@ const CategorySection = () => {
             }}
           >
             <motion.div
-              className="image_card1 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
+              className="image_card1 font-custom2 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
               initial="hidden"
               animate="visible"
               whileHover={{ scale: 1.1 }}
@@ -124,10 +124,10 @@ const CategorySection = () => {
                 src={card.image}
                 alt="category"
               />
-              <p className=" text-white pt-2 text-center md:text-[25px] md:text-left md:pt-2 ">
+              <p className="font-custom2 text-white pt-2 text-center md:text-[25px] md:text-left md:pt-2 ">
                 {card.title}
               </p>
-              <p className=" text-[#8B8B8B] text-center md:text-[20px] md:text-left">
+              <p className="font-custom2 text-[#8B8B8B] text-center md:text-[20px] md:text-left">
                 {card.description}
               </p>
             </motion.div>
