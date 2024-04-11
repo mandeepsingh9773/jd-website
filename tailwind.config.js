@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         custom1: ['Atkinson Hyperlegible', 'sans-serif'],
         custom2: ['Archivo Narrow', 'sans-serif'],
+        custom3: ['Outfit', 'sans-serif'],
       },
     },
   },

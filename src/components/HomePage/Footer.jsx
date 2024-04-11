@@ -108,24 +108,26 @@ const Footer = () => {
       </div>
       <div className="flex flex-col md:flex md:flex-col md:gap-4 md:mt-3">
         <img
-          className="hidden md:inline-block md:w-[16rem]"
+          className="hidden md:inline-block md:w-[14rem]"
           src={Line}
           alt="line"
         />
-        <input
-          className="w-1/2 md:w-auto p-1 mb-4 md:mb-0 md:text-[18px] md:p-2 text-black"
-          type="text"
-          id="email"
-          name="email"
-          placeholder="Email"
-        />
-        <motion.button
-          className="w-1/2 p-1 md:w-auto lg:w-auto bg-[#303030] text-[#A4A4A4] hover:bg-gray-800 md:p-2 md:text-[18px]"
-          whileTap={{ scale: 0.8 }}
-          whileHover={{ scale: 1.1 }}
-        >
-          Subscribe
-        </motion.button>
+        <div className="flex flex-col gap-4 pt-[8px] md:w-auto">
+          <input
+            className="w-1/2 md:w-full p-1 text-sm md:text-base text-black"
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email"
+          />
+          <motion.button
+            className="w-1/2 p-1 bg-[#303030] text-[#A4A4A4] hover:bg-gray-800 md:w-auto"
+            whileTap={{ scale: 0.8 }}
+            whileHover={{ scale: 1.1 }}
+          >
+            Subscribe
+          </motion.button>
+        </div>
       </div>
     </div>
   );

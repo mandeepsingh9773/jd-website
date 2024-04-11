@@ -31,7 +31,7 @@ import PB_6 from "../../images/Product Booklet/i6.jpg";
 const ProductBookletCom = () => {
   return (
     <div className="main bg-black md:flex md:justify-center md:items-center md:flex-col">
-      <div className="booklet-area bg-black flex justify-center md:px-0 lg:px-24 lg:py-20 xl:px-20">
+      <div className="booklet-area bg-black w-full flex justify-center md:px-0 lg:px-0 lg:py-20 xl:px-0">
         <PageFlip
           className="md:pt-0 md:h-[600] md:w-[400]"
           width={300}
@@ -43,7 +43,6 @@ const ProductBookletCom = () => {
           <div className="Page2">
             <img alt="SampleImage" src={PDF_2} />
           </div>
-
           <div className="Page3">
             {" "}
             <img alt="SampleImage" src={PDF_3} />

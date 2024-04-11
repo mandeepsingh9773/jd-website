@@ -6,6 +6,9 @@ import { FaLinkedin } from "react-icons/fa";
 import line from "../../images/Line 2.png";
 import "./ContactStyle.css";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,21 +21,37 @@ const Contact = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    // Validate email
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (!emailRegex.test(formData.email)) {
-      alert("Please enter a valid email address.");
+      toast.error("Please enter valid Email.");
       return;
     }
 
-    // Validate phone number
     const phoneRegex = /^[0-9]{10}$/;
     if (!phoneRegex.test(formData.contact)) {
-      alert("Please enter a valid 10-digit phone number.");
+      toast.error("Please enter a valid 10-digit phone number.");
       return;
     }
-
     console.log(formData);
+
+    emailjs
+      .sendForm("service_8vbl1qo", "template_nongy9l", e.target, "7oWfUN-naTYmW9lM_")
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success("Email sent successfully!"); 
+          setFormData({
+            name: "",
+            contact: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error("Failed to send email.");
+        }
+      );
   };
 
   const handleChange = (e) => {
@@ -49,6 +68,17 @@ const Contact = () => {
         id="contact"
         className="main bg-photo bg-cover bg-center bg-no-repeat bg-fixed text-white space-y- flex flex-col md:flex md:flex-row md:py-8 lg:flex lg:flex-row lg:justify-between lg:py-12 xl:flex xl:flex-row xl:justify-between xl:py-14"
       >
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <div className="logo-email md:flex md:flex-row md:justify-center md:w-1/2 xl:w-1/2">
           <div className="logos flex flex-row justify-center items-center space-x-12 pt-6 pb-1 md:flex md:flex-col md:gap-8 md:justify-center md:items-end md:pr-14 md:pb-[18rem] md:w-1/4  lg:flex lg:flex-col lg:gap-8 lg:justify-center lg:items-end lg:mt-4 lg:pr-14 lg:pb-[18rem] lg:pt-4 lg:w-1/2 xl:flex xl:flex-col xl:gap-8 xl:justify-center xl:items-end xl:pr-14 xl:pt-6 xl:pb-[18rem] xl:w-1/2">
             <Link

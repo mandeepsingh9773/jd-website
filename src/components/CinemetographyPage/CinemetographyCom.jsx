@@ -9,11 +9,11 @@ import React from "react";
 const CinemetographyCom = () => {
   return (
     <div className="main bg-black md:flex md:justify-center md:items-center md:flex-col">
-      <div className="cover-photo bg-black md:px-0 lg:px-24 lg:py-20 xl:px-28 xl:py-12">
+      <div className="cover-photo bg-black md:px-0 md:pt-16 lg:px-20 lg:py-20 xl:px-28 xl:py-12">
         <iframe
           width=""
           height=""
-          className="aspect-video h-[220px] w-full xl:h-[500px] xl:w-[1100px]"
+          className="aspect-video flex px-16 h-[220px] w-full md:h-[350px] md:w-[600px] lg:h-[500px] lg:w-[700px] xl:h-[500px] xl:w-[1000px]"
           src="https://www.youtube.com/embed/ZIK_c5-L6wI?si=7clUCO9Zd7YSim2e&autoplay=1"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
