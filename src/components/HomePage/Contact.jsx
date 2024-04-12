@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -8,7 +8,9 @@ import "./ContactStyle.css";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,16 +20,19 @@ const Contact = () => {
     message: "",
   });
 
+  const form = useRef();
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const phoneRegex = /^[0-9]{10}$/;
+
     if (!emailRegex.test(formData.email)) {
       toast.error("Please enter valid Email.");
       return;
     }
 
-    const phoneRegex = /^[0-9]{10}$/;
     if (!phoneRegex.test(formData.contact)) {
       toast.error("Please enter a valid 10-digit phone number.");
       return;
@@ -35,20 +40,18 @@ const Contact = () => {
     console.log(formData);
 
     emailjs
-      .sendForm("service_8vbl1qo", "template_nongy9l", e.target, "7oWfUN-naTYmW9lM_")
+      .sendForm(
+        'service_8vbl1qo',
+        'template_nongy9l',
+        form.current, {
+        publicKey: '7oWfUN-naTYmW9lM_',
+      }
+      )
       .then(
         (result) => {
-          console.log(result.text);
-          toast.success("Email sent successfully!"); 
-          setFormData({
-            name: "",
-            contact: "",
-            email: "",
-            message: "",
-          });
+          toast.success("Email sent successfully!");
         },
         (error) => {
-          console.log(error.text);
           toast.error("Failed to send email.");
         }
       );
@@ -70,14 +73,13 @@ const Contact = () => {
       >
         <ToastContainer
           position="top-center"
-          autoClose={5000}
+          autoClose={1000}
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick
           rtl={false}
           pauseOnFocusLoss
           draggable
-          pauseOnHover
         />
         <div className="logo-email md:flex md:flex-row md:justify-center md:w-1/2 xl:w-1/2">
           <div className="logos flex flex-row justify-center items-center space-x-12 pt-6 pb-1 md:flex md:flex-col md:gap-8 md:justify-center md:items-end md:pr-14 md:pb-[18rem] md:w-1/4  lg:flex lg:flex-col lg:gap-8 lg:justify-center lg:items-end lg:mt-4 lg:pr-14 lg:pb-[18rem] lg:pt-4 lg:w-1/2 xl:flex xl:flex-col xl:gap-8 xl:justify-center xl:items-end xl:pr-14 xl:pt-6 xl:pb-[18rem] xl:w-1/2">
@@ -153,6 +155,7 @@ const Contact = () => {
           <form
             className="flex flex-col px-6 text-white"
             onSubmit={handleFormSubmit}
+            ref={form}
           >
             <input
               className="p-2 w-full md:w-full lg:w-[410px] xl:w-[410px] h-[45px] md:p-4 bg-black bg-opacity-0 border-t-[1px] border-l-[1px] border-white border-opacity-100"
