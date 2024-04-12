@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -11,19 +11,10 @@ import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    contact: "",
-    email: "",
-    message: "",
-  });
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
   const [message, setMessage] = useState("");
-
-  const form = useRef();
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -40,7 +31,6 @@ const Contact = () => {
       toast.error("Please enter a valid 10-digit phone number.");
       return;
     }
-    console.log(formData);
 
     const templateParams = {
       from_name: name,
@@ -59,12 +49,7 @@ const Contact = () => {
       .then(
         (result) => {
           toast.success("Email sent successfully!");
-          setFormData({
-            name: "",
-            contact: "",
-            email: "",
-            message: "",
-          });
+          console.log(result);
         },
         (error) => {
           toast.error(
@@ -168,7 +153,6 @@ const Contact = () => {
           <form
             className="flex flex-col px-6 text-white"
             onSubmit={handleFormSubmit}
-            ref={form}
           >
             <input
               className="p-2 w-full md:w-full lg:w-[410px] xl:w-[410px] h-[45px] md:p-4 bg-black bg-opacity-0 border-t-[1px] border-l-[1px] border-white border-opacity-100"
