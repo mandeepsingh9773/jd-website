@@ -10,8 +10,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 
-
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -19,6 +17,11 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [contact, setContact] = useState("");
+  const [message, setMessage] = useState("");
 
   const form = useRef();
 
@@ -28,37 +31,47 @@ const Contact = () => {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     const phoneRegex = /^[0-9]{10}$/;
 
-    if (!emailRegex.test(formData.email)) {
+    if (!emailRegex.test(email)) {
       toast.error("Please enter valid Email.");
       return;
     }
 
-    if (!phoneRegex.test(formData.contact)) {
+    if (!phoneRegex.test(contact)) {
       toast.error("Please enter a valid 10-digit phone number.");
       return;
     }
     console.log(formData);
 
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: "Jaydeep",
+      message: message,
+    };
+
     emailjs
-      .sendForm(
-        'service_8vbl1qo',
-        'template_nongy9l',
-        form.current, {
-        publicKey: '7oWfUN-naTYmW9lM_',
-      }
+      .send(
+        "service_8vbl1qo",
+        "template_nongy9l",
+        templateParams,
+        "7oWfUN-naTYmW9lM_"
       )
       .then(
         (result) => {
           toast.success("Email sent successfully!");
+          setFormData({
+            name: "",
+            contact: "",
+            email: "",
+            message: "",
+          });
         },
         (error) => {
-          toast.error("Failed to send email.");
+          toast.error(
+            "Failed to submit form. Please try again or try contact on given mail."
+          );
         }
       );
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleEmailClick = () => {
@@ -160,36 +173,32 @@ const Contact = () => {
             <input
               className="p-2 w-full md:w-full lg:w-[410px] xl:w-[410px] h-[45px] md:p-4 bg-black bg-opacity-0 border-t-[1px] border-l-[1px] border-white border-opacity-100"
               type="text"
-              id="name"
-              name="name"
               placeholder="Name"
-              onChange={handleChange}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
             <br />
             <input
               className="p-2 w-full md:w-full lg:w-[410px] xl:w-[410px] h-[45px] md:p-4 bg-black bg-opacity-0 border-t-[1px] border-l-[1px] border-white border-opacity-100"
               type="text"
-              id="contact"
-              name="contact"
               placeholder="Contact"
-              onChange={handleChange}
+              value={contact}
+              onChange={(e) => setContact(e.target.value)}
             />
             <br />
             <input
               className="p-2 w-full md:w-full lg:w-[410px] xl:w-[410px] h-[45px] md:p-4 bg-black bg-opacity-0 border-t-[1px] border-l-[1px] border-white border-opacity-100"
               type="text"
-              id="email"
-              name="email"
               placeholder="Email"
-              onChange={handleChange}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <br />
             <textarea
               className="p-2 w-full md:w-full lg:w-[410px] xl:w-[410px] h-[100px] mb-6 md:p-4 bg-black bg-opacity-0 border-t-[1px] border-l-[1px] border-white border-opacity-100 resize-none"
-              id="message"
-              name="message"
               placeholder="Message"
-              onChange={handleChange}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             ></textarea>
             <motion.button
               className="my-8 p-2 w-full md:w-auto lg:w-auto xl:w-auto h-[35px] m-0 bg-[#303030] text-[#A4A4A4] hover:bg-gray-800"
