@@ -139,14 +139,14 @@ const CategorySection = () => {
             }}
           >
             <motion.div
-              className="image_card1 font-custom3 flex flex-col md:h-[95%] md:w-[auto] lg:w-auto lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
+              className="image_card1 font-custom3 flex flex-col md:h-[95%] md:w-auto lg:w-[260px] lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
               initial="hidden"
               animate="visible"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.8 }}
             >
               <img
-                className="w-full h-[240px] md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0 overflow-hidden"
+                className="w-full h-[240px] object-cover md:h-[410px] md:w-[290px] md:grayscale md:hover:grayscale-0 overflow-hidden"
                 src={card.image}
                 alt="category"
               />
