@@ -1,10 +1,10 @@
 import React from "react";
-// import PROMO_1 from "../../images/Promo Banners/i1.jpg";
-// import PROMO_2 from "../../images/Promo Banners/i2.jpg";
-// import PROMO_3 from "../../images/Promo Banners/i3.jpg";
-// import PROMO_4 from "../../images/Promo Banners/i4.jpg";
-// import PROMO_5 from "../../images/Promo Banners/i5.jpg";
-// import PROMO_6 from "../../images/Promo Banners/i6.jpg";
+import COP_1 from "../../images/Corporate Promo/i1.jpg";
+import COP_2 from "../../images/Corporate Promo/i2.jpg";
+import COP_3 from "../../images/Corporate Promo/i3.jpg";
+import COP_4 from "../../images/Corporate Promo/i4.jpg";
+import COP_5 from "../../images/Corporate Promo/i5.jpg";
+import COP_6 from "../../images/Corporate Promo/i6.jpg";
 
 const CinemetographyCom = () => {
   return (
@@ -49,6 +49,14 @@ const CinemetographyCom = () => {
             video that breathes the spirit of the company's future.
           </p>
         </div>
+      </div>
+      <div className="photos bg-black columns-1 py-8 px-4 md:columns-1 lg:columns-2 space-y-6 gap-6 md:py-12">
+        <img alt="SampleImage" src={COP_1} className="md:h-[450px] md:w-[450px] object-cover"/>
+        <img alt="SampleImage" src={COP_6} className="md:h-[550px] md:w-[450px] object-cover"/>
+        <img alt="SampleImage" src={COP_5} className="md:h-[450px] md:w-[450px] object-cover"/>
+        <img alt="SampleImage" src={COP_2} className="md:h-[450px] md:w-[450px] object-cover"/>
+        <img alt="SampleImage" src={COP_4} className="md:h-[450px] md:w-[450px] object-cover"/>
+        <img alt="SampleImage" src={COP_3} className="md:h-[550px] md:w-[450px] object-cover"/>
       </div>
     </div>
   );

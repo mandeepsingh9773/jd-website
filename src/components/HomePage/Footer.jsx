@@ -122,7 +122,7 @@ const Footer = () => {
           <p className="text-[#8B8B8B] text-[18px] pt-2 md:pt-2">LinkedIn</p>
         </Link>
         <Link
-          to="https://www.instagram.com/jaydeepswarankar/"
+          to="https://www.instagram.com/velarstudios.co/"
           target="_blank"
           rel="noopener noreferrer"
         >

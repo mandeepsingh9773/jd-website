@@ -25,9 +25,9 @@ const Hero = () => {
         animate="visible"
         variants={textVariants}
       >
-        We help <span className="text-[#FF9000]">brands</span> and{" "}
-        <span className="text-[#FF9000]">agencies</span> with meaningful and{" "}
-        <span className="text-[#FF9000]">meticulously visual experiences.</span>
+        I help <span className="text-[#FF9000]">brands</span> and{" "}
+        <span className="text-[#FF9000]">agencies</span> with impactful, {" "}
+        <span className="text-[#FF9000]">meticulously crafted visual experiences.</span>
       </motion.p>
       <motion.button
         className="md:hidden inline-block text-xl border border-white px-[1.5rem] py-[0.4rem] mb-14 rounded-full md:text-2xl md:pl-4 md:pb-6 text-white tracking-wide hover:text-[#FF9000]"

@@ -1,14 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Category_5 from "../../images/category_5.png";
-import Category_1 from "../../images/category_1.png";
-import Category_2 from "../../images/category_2.png";
-import Category_3 from "../../images/category_3.png";
-import Category_4 from "../../images/category_4.png";
 import { Link } from "react-router-dom";
+import Web_1 from "../../images/Category Images/w1.jpg";
+import Web_2 from "../../images/Category Images/w2.jpg";
+import Web_3 from "../../images/Category Images/w3.jpg";
+import Web_4 from "../../images/Category Images/w4.jpg";
+import Web_5 from "../../images/Category Images/w5.jpg";
+import Web_6 from "../../images/Category Images/w6.jpg";
+import Web_7 from "../../images/Category Images/w7.jpg";
+import Web_8 from "../../images/Category Images/w8.jpg";
+import Phone_1 from "../../images/Category Images/m1.jpg";
+import Phone_2 from "../../images/Category Images/m2.jpg";
+import Phone_3 from "../../images/Category Images/m3.jpg";
+import Phone_4 from "../../images/Category Images/m4.jpg";
+import Phone_5 from "../../images/Category Images/m5.jpg";
+import Phone_6 from "../../images/Category Images/m6.jpg";
+import Phone_7 from "../../images/Category Images/m7.jpg";
+import Phone_8 from "../../images/Category Images/m8.jpg";
 
 const CategorySection = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const categories = [
     { name: "All" },
@@ -21,56 +45,56 @@ const CategorySection = () => {
   const cards = [
     {
       category: "Branding",
-      image: Category_5,
+      image: isMobile ? Phone_1 : Web_1,
       title: "Logo",
       description: "Branding, Logo",
       id: "Branding",
     },
     {
       category: "UIUX",
-      image: Category_2,
+      image: isMobile ? Phone_2 : Web_2,
       title: "UI/UX Design",
       description: "UI/UX, Web Design",
       id: "UI/UX",
     },
     {
       category: "Promo Banners",
-      image: Category_4,
+      image: isMobile ? Phone_3 : Web_3,
       title: "Promo Banners",
       description: "Branding, Banners",
       id: "Branding",
     },
     {
       category: "Business Branding",
-      image: Category_3,
+      image: isMobile ? Phone_4 : Web_4,
       title: "Business Branding",
       description: "Card, Letterhead",
       id: "Branding",
     },
     {
       category: "cinematography",
-      image: Category_3,
+      image: isMobile ? Phone_5 : Web_5,
       title: "Corporate Promo",
       description: "Cinematography, Script",
       id: "Cinematography",
     },
     {
       category: "Art & Decor",
-      image: Category_1,
+      image: isMobile ? Phone_6 : Web_6,
       title: "Art & Decor",
       description: "Frames, Artwork",
       id: "Decor",
     },
     {
       category: "Standees",
-      image: Category_2,
+      image: isMobile ? Phone_7 : Web_7,
       title: "Standees",
       description: "Branding, Showcase",
       id: "Branding",
     },
     {
       category: "Product Booklet",
-      image: Category_4,
+      image: isMobile ? Phone_8 : Web_8,
       title: "Product Booklet",
       description: "Product Showcase",
       id: "Branding",
@@ -89,7 +113,9 @@ const CategorySection = () => {
           <motion.button
             key={category.name}
             className="bg-black text-white md:text-[24px] hover:text-[#FF9000]"
-            style={{ color: selectedCategory === category.name ? '#FF9000' : 'white' }}
+            style={{
+              color: selectedCategory === category.name ? "#FF9000" : "white",
+            }}
             initial="hidden"
             animate="visible"
             whileTap={{ scale: 0.8 }}

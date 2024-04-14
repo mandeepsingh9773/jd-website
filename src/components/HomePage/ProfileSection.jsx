@@ -19,13 +19,13 @@ const ProfileSection = () => {
         <div className="desc_sec text-start md:flex md:text-left lg:text-left lg:flex xl:text-left xl:flex">
           <div class="hidden md:inline-block md:h-[13rem] md:mr-4 lg:inline-block lg:h-[17rem] lg:mr-4 xl:inline-block border-l border-white xl:h-[18rem] xl:mr-4"></div>
           <div className="flex flex-col justify-end xl:pl-4 xl:pb-2">
-            <p className="text-white text-[18px] md:pb-6 md:text-[18px] lg:text-[22px] lg:pb-8 xl:text-[24px] xl:pb-5">
-              We believe in making brand grow
+            <p className="text-white text-[18px] pb-6 md:pb-6 md:text-[18px] lg:text-[22px] lg:pb-8 xl:text-[24px] xl:pb-5">
+              I believe in making brand grow
               <span className="text-[#FF9000]"> rich...</span>
             </p>
             <p className="text-[#8B8B8B] md:text-[14px] md:w-[auto] lg:text-[18px] lg:w-auto xl:text-[20px] xl:leading-8 xl:w-auto">
-              We excel in designing captivating visual strategies. Our tailored
-              approach resonates with your audience, delivering compelling
+              I excel in designing captivating visual strategies with a tailored
+              approach that resonates with your audience, delivering compelling
               designs that elevate your brand's identity. Let us bring your
               vision to life.
             </p>
