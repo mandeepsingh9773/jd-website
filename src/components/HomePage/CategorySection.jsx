@@ -146,11 +146,11 @@ const CategorySection = () => {
               whileTap={{ scale: 0.8 }}
             >
               <img
-                className="w-full h-[200px] object-cover md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0 overflow-hidden"
+                className="w-full h-[240px] md:h-[410px] md:w-[290px] md:object-cover grayscale hover:grayscale-0 overflow-hidden"
                 src={card.image}
                 alt="category"
               />
-              <p className="font-custom3 text-white pt-2 text-center md:text-[25px] md:text-left md:pt-2 ">
+              <p className="font-custom3 text-white pt-2 text-center text-[20px] md:text-[25px] md:text-left md:pt-2 ">
                 {card.title}
               </p>
               <p className="font-custom3 text-[#8B8B8B] text-center md:text-[20px] md:text-left">

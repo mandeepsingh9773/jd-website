@@ -39,6 +39,7 @@ const Contact = () => {
       from_name: name,
       from_email: email,
       to_name: "Jaydeep",
+      from_contact: contact,
       message: message,
     };
 
