@@ -28,10 +28,6 @@ const BrandingCom = () => {
           </div>
         </div>
         <div className="desc bg-black space-y-8 px-4 md:px-16 lg:px-24 xl:pl-4">
-          <p className="text-white text-[24px] hidden lg:inline-block">
-            I believe in making brand grow{" "}
-            <span className="text-[#FF9000]">rich...</span>
-          </p>
           <p className="text-[#8B8B8B] text-[20px] text-justify">
             This project is delved deep to strike a balance between tradition
             and innovation. The choice of Navy blue signifies the solid academic
