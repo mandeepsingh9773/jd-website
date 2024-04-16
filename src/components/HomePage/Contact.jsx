@@ -10,8 +10,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 
-
-
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -19,7 +17,6 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
   const handleFormSubmit = (e) => {
-    
     e.preventDefault();
 
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -43,6 +40,13 @@ const Contact = () => {
       message: message,
     };
 
+    const clearFields = () => {
+      setName("");
+      setEmail("");
+      setContact("");
+      setMessage("");
+    };
+
     emailjs
       .send(
         "service_8vbl1qo",
@@ -53,7 +57,6 @@ const Contact = () => {
       .then(
         (result) => {
           toast.success("Email sent successfully!");
-          console.log(result);
         },
         (error) => {
           toast.error(
@@ -61,6 +64,8 @@ const Contact = () => {
           );
         }
       );
+
+    clearFields();
   };
 
   const handleEmailClick = () => {
