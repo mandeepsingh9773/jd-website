@@ -139,7 +139,7 @@ const CategorySection = () => {
             }}
           >
             <motion.div
-              className="image_card1 font-custom3 flex flex-col md:h-[95%] md:w-auto lg:w-[260px] lg:h-[95%] xl:w-[290px] hover:cursor-pointer"
+              className="image_card1 font-custom3 flex flex-col md:h-[95%] md:w-auto lg:w-[260px] lg:h-[95%] xl:w-auto hover:cursor-pointer"
               initial="hidden"
               animate="visible"
               whileHover={{ scale: 1.1 }}

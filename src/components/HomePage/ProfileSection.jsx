@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const ProfileSection = () => {
   return (
-    <div className="main flex flex-col gap-8 md:flex md:flex-row md:py-24 md:px-20 lg:flex lg:flex-row lg:py-28 lg:px-20 xl:flex xl:flex-row bg-black xl:py-28 xl:px-40">
+    <div className="main flex flex-col gap-8 md:flex md:flex-row md:py-24 md:px-20 lg:flex lg:flex-row lg:py-28 lg:px-20 xl:flex xl:flex-row bg-black xl:py-28 xl:px-32">
       <div className="about bg-black flex flex-col px-6 gap-10 mt-4 md:mt-2 lg:mt-1 xl:mt-0 xl:w-1/2 xl:flex xl:flex-col xl:justify-between">
         <div className="bg-black text-start xl:text-left">
           <p className="text-white font-custom4 text-[25px] text-start font-semibold mb-4 md:text-[25px] lg:text-[35px] xl:text-[40px] xl:font-medium xl:pb-4">
