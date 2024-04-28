@@ -9,6 +9,7 @@ import Web_5 from "../../images/Category Images/w5.jpg";
 import Web_6 from "../../images/Category Images/w6.jpg";
 import Web_7 from "../../images/Category Images/w7.jpg";
 import Web_8 from "../../images/Category Images/w8.jpg";
+import Web_9 from "../../images/Category Images/w9.jpg";
 import Phone_1 from "../../images/Category Images/m1.jpg";
 import Phone_2 from "../../images/Category Images/m2.jpg";
 import Phone_3 from "../../images/Category Images/m3.jpg";
@@ -17,6 +18,7 @@ import Phone_5 from "../../images/Category Images/m5.jpg";
 import Phone_6 from "../../images/Category Images/m6.jpg";
 import Phone_7 from "../../images/Category Images/m7.jpg";
 import Phone_8 from "../../images/Category Images/m8.jpg";
+import Phone_9 from "../../images/Category Images/m9.jpg";
 
 const CategorySection = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -49,6 +51,13 @@ const CategorySection = () => {
       title: "Logo",
       description: "Branding, Logo",
       id: "Branding",
+    },
+    {
+      category: "App UIUX",
+      image: isMobile ? Phone_9 : Web_9,
+      title: "App UI",
+      description: "UI/UX, Mobile Design",
+      id: "UI/UX",
     },
     {
       category: "UIUX",

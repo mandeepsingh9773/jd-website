@@ -9,6 +9,7 @@ import HomePage from "./components/HomePage/HomePage";
 import CinemetographyPage from "./components/CinemetographyPage/CinemetographyPage";
 import StandeesPage from "./components/StandeesPage/StandeesPage";
 import ProductBookletPage from "./components/ProductBookletPage/ProductBookletPage";
+import DealerAppUIPage from "./components/DealerAppUIPage/DealerAppUIPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/branding" element={<BrandingPage />} />
         <Route path="/uiux" element={<UIUXPage />} />
+        <Route path="/appuiux" element={<DealerAppUIPage />} />
         <Route path="/businessbranding" element={<BusinessBrandingPage />} />
         <Route path="/promobanners" element={<PromoBannersPage />} />
         <Route path="/art&decor" element={<ArtDecorPage />} />
